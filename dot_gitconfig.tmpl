@@ -1,0 +1,23 @@
+[user]
+	email = hanushkumar.su@gmail.com
+	name = hanush-kumar
+[credential]
+	helper = !gh auth git-credential
+[core]
+{{- if eq .chezmoi.os "windows" }}
+    # Windows-specific settings
+    autocrlf = true
+    editor = code --wait
+    # Example of a Windows path
+    excludesfile = C:/Users/hanush/.gitignore_global
+{{- else }}
+    # WSL/Linux-specific settings
+    autocrlf = input
+    editor = nvim
+    # Example of a Linux path
+    excludesfile = ~/.gitignore_global
+{{- end }}
+
+[alias]
+    st = status
+    co = checkout
