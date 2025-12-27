@@ -1,0 +1,14 @@
+# Ignore Windows-specific files when on Linux
+{{ if eq .chezmoi.os "linux" }}
+Documents/
+AppData/
+Microsoft.PowerShell_profile.ps1
+user_profile.ps1
+{{ end }}
+
+# Ignore Linux-specific files when on Windows
+{{ if eq .chezmoi.os "windows" }}
+.bashrc
+.zshrc
+.profile
+{{ end }}
