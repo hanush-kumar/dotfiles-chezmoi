@@ -1,0 +1,5 @@
+[user]
+	email = hanushkumar.su@gmail.com
+	name = hanush-kumar
+[credential]
+	helper = !gh auth git-credential

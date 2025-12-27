@@ -1,0 +1,4 @@
+chezmoi
+gcc
+gemini-cli
+neovim
